@@ -44,28 +44,23 @@ export default function Navbar() {
               (navbarOpen ? " flex" : " hidden")
             }
           >
-            {token !== null ? (
-              <ul className="flex flex-col md:flex-row list-none mr-auto">
-                <li className="px-5 py-2 flex items-center text-lg hover:font-bold">
+            <ul className="flex flex-col md:flex-row list-none mr-auto">
+            <li className="px-5 py-2 flex items-center text-lg hover:font-bold">
                   <Link to={`/`} > Home </Link>
                 </li>
                 <li className="px-5 py-2 flex items-center text-lg hover:font-bold">
                   <Link to={`/about`} > About </Link>
                 </li>
-                <li className="px-5 py-2 flex items-center text-lg hover:font-bold">
-                  <Link to={`/findmentor`} > Find Mentor </Link>
-                </li>
+              {token !== null ? (
+                  <li className="px-5 py-2 flex items-center text-lg hover:font-bold">
+                    <Link to={`/findmentor`} > Find Mentor </Link>
+                  </li>
+              ) : (
+                  <li className="px-5 py-2 flex items-center text-lg hover:font-bold">
+                    <Link to={`/signin`} > Find Mentor </Link>
+                  </li>
+              )}
               </ul>
-            ) : (
-              <ul className="flex flex-col md:flex-row list-none mr-auto">
-                <li className="px-5 py-2 flex items-center text-lg hover:font-bold">
-                  <Link to={`/`} > Home </Link>
-                </li>
-                <li className="px-5 py-2 flex items-center text-lg hover:font-bold">
-                  <Link to={`/about`} > About </Link>
-                </li>
-              </ul>
-            )}
 
             {token !== null ? (
               <div className="flex flex-col md:flex-row md:justify-end">
