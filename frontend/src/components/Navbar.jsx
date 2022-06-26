@@ -45,12 +45,12 @@ export default function Navbar() {
             }
           >
             <ul className="flex flex-col md:flex-row list-none mr-auto">
-            <li className="px-5 py-2 flex items-center text-lg hover:font-bold">
-                  <Link to={`/`} > Home </Link>
-                </li>
-                <li className="px-5 py-2 flex items-center text-lg hover:font-bold">
-                  <Link to={`/about`} > About </Link>
-                </li>
+              <li className="px-5 py-2 flex items-center text-lg hover:font-bold">
+                <Link to={`/`} > Home </Link>
+              </li>
+              <li className="px-5 py-2 flex items-center text-lg hover:font-bold">
+                <Link to={`/about`} > About </Link>
+              </li>
               {token !== null ? (
                   <li className="px-5 py-2 flex items-center text-lg hover:font-bold">
                     <Link to={`/findmentor`} > Find Mentor </Link>
