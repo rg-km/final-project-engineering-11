@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import logoImg from '../assets/logohi.png'
 import {MenuIcon, XIcon} from '@heroicons/react/outline'
 import { Link, useNavigate } from 'react-router-dom';
