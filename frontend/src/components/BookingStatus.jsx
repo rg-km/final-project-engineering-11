@@ -4,7 +4,7 @@ import api from '../api/api'
 export default function BookingStatus() {
     const [status, setStatus] = useState([])
 
-    const getUser = async () => {
+    const getStatus = async () => {
         try {
         await api.get('/user/booking/status')
          .then((res) => {
@@ -17,7 +17,7 @@ export default function BookingStatus() {
     };
     
     useEffect(() => {
-        getUser();
+        getStatus();
     }, []);
 
     return (

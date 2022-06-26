@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import api from '../api/api'
+import { useNavigate } from 'react-router-dom';
 
 export default function Listmentor() {
     const [mentors, setMentor] = useState([])
+    const nav = useNavigate();
 
-    const getUser = async () => {
+    const getMentor = async () => {
         try {
         await api.get('/user/mentor/mentorlist')
          .then((res) => {
@@ -17,8 +19,19 @@ export default function Listmentor() {
     };
     
     useEffect(() => {
-        getUser();
+        getMentor();
     }, []);
+
+    const bookMentor = async (id) => {
+      try {
+        await api.get(`/user/booking/mentor/${id}`)
+         .then((res) => {
+            nav("/profile")
+        })
+        } catch (error) {
+          console.log(error);
+        }
+    }
 
       return (
         <div className="bg-gray-200">
@@ -26,7 +39,7 @@ export default function Listmentor() {
         <div className=" bg-gray-200 flex justify-center flex flex-wrap items-center">
           {mentors.map((mentor, index) => {
           return (
-          <div className="container max-w-lg bg-white rounded hadow-lg transform duration-200 easy-in-out m-20 hover:scale-110"  key={index}>
+          <div className="container max-w-lg bg-white rounded hadow-lg transform duration-200 easy-in-out m-20 hover:scale-110" key={index}>
                   <div className="flex flex-wrap h-2/4 sm:h-64 overflow-hidden">
                       <img
                         className="w-full rounded-t"
@@ -54,7 +67,9 @@ export default function Listmentor() {
                         <p className="mt-2 text-gray-500">
                           {mentor.bio}
                         </p>
-                        <button onClick={() => window.location = ''} className="mt-5 inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-yellow-500 rounded-lg hover:bg-yellow-700 focus:ring-4 focus:outline-none focus:ring-yellow-200">
+                        <button
+                        onClick={() => bookMentor(mentor.id)}
+                        className="mt-5 inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-yellow-500 rounded-lg hover:bg-yellow-700 focus:ring-4 focus:outline-none focus:ring-yellow-200">
                           Buat Janji
                         </button>
                       </div>
