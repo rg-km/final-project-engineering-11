@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import logoImg from '../assets/logohi.png'
 import {MenuIcon, XIcon} from '@heroicons/react/outline'
 import { Link, useNavigate } from 'react-router-dom';
@@ -56,18 +56,28 @@ export default function Navbar() {
               (navbarOpen ? " flex" : " hidden")
             }
           >
-            <ul className="flex flex-col md:flex-row list-none mr-auto">
-              <li className="px-5 py-2 flex items-center text-lg hover:font-bold">
-                <Link to={`/`} > Home </Link>
-              </li>
-              <li className="px-5 py-2 flex items-center text-lg hover:font-bold">
-                <Link to={`/about`} > About </Link>
-              </li>
-              <li className="px-5 py-2 flex items-center text-lg hover:font-bold">
-                <Link to={`/findmentor`} > Find Mentor </Link>
-              </li>
-              <br/>
-            </ul>
+            {token !== null ? (
+              <ul className="flex flex-col md:flex-row list-none mr-auto">
+                <li className="px-5 py-2 flex items-center text-lg hover:font-bold">
+                  <Link to={`/`} > Home </Link>
+                </li>
+                <li className="px-5 py-2 flex items-center text-lg hover:font-bold">
+                  <Link to={`/about`} > About </Link>
+                </li>
+                <li className="px-5 py-2 flex items-center text-lg hover:font-bold">
+                  <Link to={`/findmentor`} > Find Mentor </Link>
+                </li>
+              </ul>
+            ) : (
+              <ul className="flex flex-col md:flex-row list-none mr-auto">
+                <li className="px-5 py-2 flex items-center text-lg hover:font-bold">
+                  <Link to={`/`} > Home </Link>
+                </li>
+                <li className="px-5 py-2 flex items-center text-lg hover:font-bold">
+                  <Link to={`/about`} > About </Link>
+                </li>
+              </ul>
+            )}
 
             {token !== null ? (
               <div className="flex flex-col md:flex-row md:justify-end">
