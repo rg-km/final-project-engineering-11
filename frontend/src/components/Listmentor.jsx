@@ -67,8 +67,8 @@ export default function Listmentor() {
               {mentors && mentors.length > 0 ? (
                 mentors.map((mentor, index) => {
                   return (
-                    <div className="container max-w-lg bg-white rounded hadow-lg transform duration-200 easy-in-out m-20 hover:scale-110" key={index}>
-                      <div className="flex flex-wrap h-2/4 sm:h-64 overflow-hidden">
+                    <div className="container max-w-md bg-white rounded hadow-lg transform duration-200 easy-in-out m-10 hover:scale-110" key={index}>
+                      <div className="flex flex-wrap h-1/3 sm:h-64 overflow-hidden">
                         <img
                           className="w-full rounded-t"
                           src="https://ik.imagekit.io/t3defxmi6/hero_-aa6cXoCT.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654854480679"

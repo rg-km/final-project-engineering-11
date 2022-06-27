@@ -28,8 +28,8 @@ const ProfileCard = () => {
                 <div className='bg-gray-500 m-5'>
                     <img src={logoImg} alt="user-profile-pic" />
                 </div>
-                <div className='flex flex-col justify-center md:items-start w-full px-2 m-5'>
-                    <h1 className='py-3 text-4xl md:text-5xl lg:text-7xl font-bold'>Profile Data</h1>
+                <div className='flex flex-col justify-center md:items-start w-full p-2 lg:m-5'>
+                    <h1 className='py-3 text-4xl md:text-5xl lg:text-6xl font-bold'>Profile Data</h1>
                     <UpdateProfile 
                         refetch={getUser}
                     />
@@ -37,23 +37,23 @@ const ProfileCard = () => {
                         <tbody>
                             <tr>
                                 <td><p className='text-sm md:text-base lg:text-xl font-bold'>Username</p></td>
-                                <td><p className='text-sm md:text-base lg:text-xl pl-2'>{user.username}</p></td>
+                                <td><p className='text-sm md:text-base lg:text-xl pl-2'>: {user.username}</p></td>
                             </tr>
                             <tr>
                                 <td><p className='text-sm md:text-base lg:text-xl font-bold'>Nama</p></td>
-                                <td><p className='text-sm md:text-base lg:text-xl pl-2'>{user.name}</p></td>
+                                <td><p className='text-sm md:text-base lg:text-xl pl-2'>: {user.name}</p></td>
                             </tr>
                             <tr>
                                 <td><p className='text-sm md:text-base lg:text-xl font-bold'>Address</p></td>
-                                <td><p className='text-sm md:text-base lg:text-xl pl-2'>{user.address}</p></td>
+                                <td><p className='text-sm md:text-base lg:text-xl pl-2'>: {user.address}</p></td>
                             </tr>
                             <tr>
                                 <td><p className='text-sm md:text-base lg:text-xl font-bold'>No HP</p></td>
-                                <td><p className='text-sm md:text-base lg:text-xl pl-2'>{user.phone}</p></td>
+                                <td><p className='text-sm md:text-base lg:text-xl pl-2'>: {user.phone}</p></td>
                             </tr>
                             <tr>
                                 <td><p className='text-sm md:text-base lg:text-xl font-bold'>Email</p></td>
-                                <td><p className='text-sm md:text-base lg:text-xl pl-2'>{user.email}</p></td>
+                                <td><p className='text-sm md:text-base lg:text-xl pl-2'>: {user.email}</p></td>
                             </tr>
                         </tbody>
                     </table>

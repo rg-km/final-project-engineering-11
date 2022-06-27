@@ -34,7 +34,7 @@ function UpdateProfile({refetch}) {
     return (
         <>
         <button
-            className="bg-yellow-500 text-black active:bg-gray-300 px-3 py-2 rounded-xl shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
+            className="bg-yellow-500 text-white active:bg-gray-300 px-3 py-2 rounded-xl shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
             type="button"
             onClick={() => setShowModal(true)}
         >

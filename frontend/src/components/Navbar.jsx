@@ -65,11 +65,11 @@ export default function Navbar() {
             {token !== null ? (
               <div className="flex flex-col md:flex-row md:justify-end">
                 <Link to={`/profile`} className="px-5 py-3 hover:font-bold">Profile</Link>
-                <button onClick={logout} className="rounded-lg bg-yellow-500 px-5 py-3 hover:font-bold">Sign Out</button>
+                <button onClick={logout} className="rounded-lg bg-yellow-500 px-5 py-3 text-white hover:font-bold">Sign Out</button>
               </div>
             ) : (
               <div className="flex flex-col md:flex-row md:justify-end">
-                <Link to={`/signup`} className="rounded-lg bg-yellow-500 px-5 py-3 hover:font-bold">Sign Up</Link>
+                <Link to={`/signup`} className="rounded-lg bg-yellow-500 px-5 py-3 text-white hover:font-bold">Sign Up</Link>
                 <Link to={`/signin`} className="px-5 py-3 hover:font-bold">Sign In</Link>
               </div>
             )}

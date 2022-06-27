@@ -49,7 +49,7 @@ export default function BookingStatus() {
                             {status.map((booking) => {
                                 return (
                                     <div className="mx-2 w-72 mb-8" key={booking.book_id}>
-                                        <div className="bg-yellow-300 rounded-xl">
+                                        <div className="bg-yellow-400 rounded-xl">
                                             <div className="p-4">
                                                 <div className="flex items-center">
                                                     <h2 className="text-lg font-semibold">{booking.mentor_name}</h2>
@@ -60,7 +60,7 @@ export default function BookingStatus() {
                                             {booking.status === "Accepted" ? (
                                                 <>
                                                 <button
-                                                className="bg-yellow-500 hover:bg-yellow-300 text-white active:bg-yellow-400 font-bold uppercase text-sm px-6 py-3 rounded-lg shadow hover:shadow-lg outline-none focus:outline-none mx-2 mb-2 ease-linear transition-all duration-150"
+                                                className="bg-yellow-600 hover:bg-yelow-100 text-white font-bold uppercase text-sm px-6 py-3 rounded-lg shadow hover:shadow-lg mx-2 mb-2 ease-linear transition-all duration-150"
                                                 onClick={() => handleMentorContact(booking.book_id)}>
                                                 Mentor Contact
                                                 </button>
@@ -70,10 +70,28 @@ export default function BookingStatus() {
                                                     <div className="relative w-auto my-6 mx-auto max-w-3xl">
                                                         <div className="border-0 rounded-lg shadow-lg w-full relative flex flex-col bg-white outline-none focus:outline-none">
                                                             <div className="relative p-6 flex-auto">
-                                                                <p className="my-4 text-slate-500 text-lg leading-relaxed"> {mentorContact.name}</p>
-                                                                <p className="my-4 text-slate-500 text-lg leading-relaxed"> {mentorContact.phone}</p>
-                                                                <p className="my-4 text-slate-500 text-lg leading-relaxed"> {mentorContact.email}</p>
-                                                                <p className="my-4 text-slate-500 text-lg leading-relaxed"> {mentorContact.address}</p>
+                                                                <h2 className="mb-2 text-xl font-bold tracking-tight text-gray-900">Mentor Contact</h2>
+                                                                <p className='text-base pb-3'>Let's contact your mentor to start a discussion</p>
+                                                                <table>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td><p className='text-base font-bold'>Mentor Name</p></td>
+                                                                            <td><p className='text-base pl-2'>: {mentorContact.name}</p></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td><p className='text-base font-bold'>Phone/Whatsapp</p></td>
+                                                                            <td><p className='text-base pl-2'>: {mentorContact.phone}</p></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td><p className='text-base font-bold'>Email</p></td>
+                                                                            <td><p className='text-base pl-2'>: {mentorContact.email}</p></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td><p className='text-base font-bold'>Address</p></td>
+                                                                            <td><p className='text-base pl-2'>: {mentorContact.address}</p></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
                                                             </div>
                                                             <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
                                                                 <button
