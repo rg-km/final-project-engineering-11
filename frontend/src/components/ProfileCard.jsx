@@ -23,9 +23,9 @@ const ProfileCard = () => {
     }, []);
 
     return (
-        <div className='bg-zinc-200 flex flex-col justify-between'>
-            <div className='bg-gray-200 grid md:grid-cols-2 mx-20'>
-                <div className='bg-gray-500 m-5'>
+        <div className='bg-gradient-to-b from-yellow-200 to-white flex flex-col justify-between'>
+            <div className='grid md:grid-cols-2 mx-20'>
+                <div className='bg-gray-100 m-5'>
                     <img src={logoImg} alt="user-profile-pic" />
                 </div>
                 <div className='flex flex-col justify-center md:items-start w-full p-2 lg:m-5'>

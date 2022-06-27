@@ -50,7 +50,7 @@ export default function Listmentor() {
 
       return (
         <>
-          <form className='bg-gray-200 p-5'>   
+          <form className='bg-yellow-300 p-5'>   
             <label className="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
             <div className="relative mx-10 lg:mx-32">
               <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -61,13 +61,13 @@ export default function Listmentor() {
                 className="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-yellow-500 focus:border-yellow-500" placeholder="Search Mentor..." required />
             </div>
           </form>
-          <div className="bg-gray-200">
+          <div className="bg-gradient-to-b from-yellow-300 to-yellow-100">
             <h1 className="flex justify-center text-4xl md:text-5xl lg:text-5xl font-bold">Daftar Mentor</h1>
-            <div className=" bg-gray-200 flex justify-center flex flex-wrap items-center">
+            <div className=" flex justify-center flex flex-wrap items-center">
               {mentors && mentors.length > 0 ? (
                 mentors.map((mentor, index) => {
                   return (
-                    <div className="container max-w-md bg-white rounded hadow-lg transform duration-200 easy-in-out m-10 hover:scale-110" key={index}>
+                    <div className="container max-w-md bg-white rounded-xl hadow-lg transform duration-200 easy-in-out m-10 hover:scale-110" key={index}>
                       <div className="flex flex-wrap h-1/3 sm:h-64 overflow-hidden">
                         <img
                           className="w-full rounded-t"
@@ -101,7 +101,7 @@ export default function Listmentor() {
                 })
               ) : ( 
               <div className="text-center">
-                <h1 className="text-3xl text-gray-400 font-bold">Tidak ada mentor</h1>
+                <h1 className="text-3xl text-gray-400 font-bold py-20">Tidak ada mentor</h1>
               </div> 
               )}
             </div>

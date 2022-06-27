@@ -3,7 +3,7 @@ import logoImg from '../assets/logohi.png'
 
 const Hero = () => {
   return (
-    <div className='w-full bg-gray-100 flex flex-col justify-between'>
+    <div className='w-full bg-gradient-to-b from-yellow-200 to-white flex flex-col justify-between'>
         <div className='max-w-[1024px] mx-auto'>
             <div className='flex flex-col justify-center md:items-start w-full px-2 my-10'>
                 <h1 className='m-auto py-3 text-4xl md:text-5xl lg:text-7xl font-bold'>About<span className="text-yellow-400">Us</span></h1>

@@ -36,20 +36,20 @@ export default function BookingStatus() {
     }, []);
 
     return (
-        <div className="bg-gray-100">
+        <div className="bg-gradient-to-b from-white to-yellow-100">
             <div>
                 <h1 className="lg:text-4xl text-3xl text-center text-gray-800 font-extrabold pt-6 mx-auto">Booking Status</h1>
             </div>
             <div className="mx-auto container py-8">
                 <div className="flex flex-wrap items-center justify-center">
                     {status === null ? (
-                        <p>belum ada kelas yang di booking</p>
+                        <p className="text-gray-500 font-bold">belum ada kelas yang di booking</p>
                     ):(
                         <>
                             {status.map((booking) => {
                                 return (
                                     <div className="mx-2 w-72 mb-8" key={booking.book_id}>
-                                        <div className="bg-yellow-400 rounded-xl">
+                                        <div className="bg-gradient-to-b from-yellow-300 to-yellow-200 rounded-xl">
                                             <div className="p-4">
                                                 <div className="flex items-center">
                                                     <h2 className="text-lg font-semibold">{booking.mentor_name}</h2>
@@ -60,7 +60,7 @@ export default function BookingStatus() {
                                             {booking.status === "Accepted" ? (
                                                 <>
                                                 <button
-                                                className="bg-yellow-600 hover:bg-yelow-100 text-white font-bold uppercase text-sm px-6 py-3 rounded-lg shadow hover:shadow-lg mx-2 mb-2 ease-linear transition-all duration-150"
+                                                className="bg-yellow-400 hover:bg-yelow-100 text-white font-bold uppercase text-sm px-6 py-3 rounded-lg shadow hover:shadow-lg mx-2 mb-2 ease-linear transition-all duration-150"
                                                 onClick={() => handleMentorContact(booking.book_id)}>
                                                 Mentor Contact
                                                 </button>

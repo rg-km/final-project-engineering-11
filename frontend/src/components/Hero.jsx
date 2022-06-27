@@ -3,8 +3,8 @@ import heroImg from '../assets/cbg.png'
 
 const Hero = () => {
   return (
-    <div name='home' className='w-full bg-white flex flex-col justify-between'>
-        <div className='bg-white grid md:grid-cols-2 max-w-[1024px] mx-auto'>
+    <div name='home' className='w-full bg-gradient-to-b from-yellow-200 to-white flex flex-col justify-between'>
+        <div className='grid md:grid-cols-2 max-w-[1024px] mx-auto'>
             <div className='flex flex-col justify-center md:items-start w-full pt-5 px-10'>
                 <h1 className=' text-5xl lg:text-6xl font-bold'>Let's find <span className="text-yellow-500 ">your Mentor</span></h1>
                 <h1 className=' text-4xl lg:text-5xl font-bold'>Build <span className="text-yellow-500">your code</span></h1>

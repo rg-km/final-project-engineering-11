@@ -23,7 +23,7 @@ const SignIn = () => {
   }
 
   return (
-    <div className="h-full bg-gradient-to-r from-yellow-300 to-yellow-500 pt-1 md:pt-12 pb-4 px-2 md:px-0">
+    <div className="bg-gradient-to-b from-yellow-400 to-yellow-200 pt-1 md:pt-12 pb-8 px-2 md:px-0">
         <div className="max-w-lg mx-auto">
             <h1 className="text-4xl font-bold text-white text-center">Sign In</h1>
         </div>

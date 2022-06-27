@@ -19,7 +19,7 @@ function App() {
           <div>
             <Navbar />
             <Hero />
-            <Articles />s
+            <Articles />
             <Footer />
           </div>
         } />

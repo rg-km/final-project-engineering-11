@@ -32,17 +32,17 @@ function Articles() {
     <div className="container mx-auto px-8 py-5">
       <h2 className='text-center text-4xl md:text-5xl hover:text-yellow-500 font-bold'>Artikel</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 space-x-3 mt-10">
-        {articles.map((article, index) => {
+        {articles.map((article) => {
           return (
-            <div className='mt-4 col-span-1 bg-gray-200 shadow-xl' key={article.id}>
-              <img className="rounded-t-lg" src={article.image} alt="Article Pic"/>
+            <div className='mt-4 col-span-1 rounded-lg bg-gradient-to-br from-yellow-300 to-yellow-100 shadow-xl' key={article.id}>
+              <img className="rounded-t-lg w-full h-52" src={article.image} alt="Article Pic"/>
               <div className="p-4">
                 <div className='overflow-y-hidden h-52'>
                 <h5 className="text-lg font-bold mb-2">{article.title}</h5>
                 <p className="text-gray-600 text-sm leading-6">{article.content}</p>
                 </div>
                 <button
-                  className="bg-yellow-500 hover:bg-yellow-700 text-white active:bg-yellow-600 font-bold hover:yellow-700 uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-2 mt-5 ease-linear transition-all duration-150"
+                  className="bg-yellow-400 hover:bg-yellow-500 text-white active:bg-yellow-600 font-bold hover:yellow-700 uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-2 mt-5 ease-linear transition-all duration-150"
                   onClick={() => handleArticleDetail(article)}>
                   Read More
                 </button>
@@ -77,7 +77,7 @@ function Articles() {
                   </div>
                 </div>
               </div>
-              {/* <div className="opacity-25 fixed inset-0 z-40 bg-black"></div> */}
+              <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
             </>
           ) : null}
                 </div>
